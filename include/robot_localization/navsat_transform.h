@@ -196,6 +196,14 @@ class NavSatTransform
     //!
     double yaw_offset_;
 
+    //! @brief UTM's meridian convergence
+    //!
+    //! Angle between projected meridian (True North) and UTM's grid Y-axis.
+    //! For UTM projection (Ellipsoidal Transverse Mercator) it is zero on the equator and non-zero everywhere else.
+    //! It increases as the poles are approached or as we're getting farther from central meridian.
+    //!
+    double utm_meridian_convergence_;
+
     //! @brief Frame ID of the robot's body frame
     //!
     //! This is needed for obtaining transforms from the robot's body frame to the frames of sensors (IMU and GPS)
